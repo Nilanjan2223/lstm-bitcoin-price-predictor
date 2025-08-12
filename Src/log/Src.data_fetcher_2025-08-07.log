@@ -1,0 +1,3 @@
+[2025-08-07 11:40:29] [INFO] [Src.data_fetcher] - Fetching data for coin: Bitcoin
+[2025-08-07 11:40:29] [INFO] [Src.data_fetcher] - Fetched 121 rows for Bitcoin
+[2025-08-07 11:40:29] [DEBUG] [Src.data_fetcher] - Database session closed.

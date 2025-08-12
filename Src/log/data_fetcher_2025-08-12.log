@@ -1,0 +1,6 @@
+[2025-08-12 13:58:58] [INFO] [data_fetcher] - Fetching data for coin: Bitcoin
+[2025-08-12 13:58:59] [INFO] [data_fetcher] - Fetched 121 rows for Bitcoin
+[2025-08-12 13:58:59] [DEBUG] [data_fetcher] - Database session closed.
+[2025-08-12 14:03:17] [INFO] [data_fetcher] - Fetching data for coin: Bitcoin
+[2025-08-12 14:03:18] [INFO] [data_fetcher] - Fetched 121 rows for Bitcoin
+[2025-08-12 14:03:18] [DEBUG] [data_fetcher] - Database session closed.

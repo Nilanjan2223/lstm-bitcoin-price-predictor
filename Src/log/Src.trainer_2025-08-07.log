@@ -1,0 +1,4 @@
+[2025-08-07 11:40:30] [INFO] [Src.trainer] - ModelTrainer initialized for Bitcoin
+[2025-08-07 11:40:30] [INFO] [Src.trainer] - Model will be saved to: D:\PythonProject\models\Bitcoin_lstm_model.h5
+[2025-08-07 11:40:30] [INFO] [Src.trainer] - Starting model training...
+[2025-08-07 11:40:44] [INFO] [Src.trainer] - Model training completed successfully.

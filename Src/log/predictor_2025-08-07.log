@@ -1,0 +1,11 @@
+[2025-08-07 12:22:57] [INFO] [predictor] - Loaded model for Bitcoin
+[2025-08-07 12:22:57] [INFO] [predictor] - Starting prediction process...
+[2025-08-07 12:22:59] [INFO] [predictor] - Predicted price for Bitcoin: 113955.02
+[2025-08-07 12:36:35] [INFO] [predictor] - Loaded model for Bitcoin
+[2025-08-07 12:36:35] [INFO] [predictor] - Starting prediction process...
+[2025-08-07 12:36:36] [INFO] [predictor] - Predicted price for Bitcoin: 113955.02
+[2025-08-07 12:36:48] [ERROR] [predictor] - No trained model found for Ethereum at D:\PythonProject\models\Ethereum_lstm_model.h5
+[2025-08-07 12:37:27] [ERROR] [predictor] - No trained model found for Tether at D:\PythonProject\models\Tether_lstm_model.h5
+[2025-08-07 12:37:39] [INFO] [predictor] - Loaded model for Bitcoin
+[2025-08-07 12:37:39] [INFO] [predictor] - Starting prediction process...
+[2025-08-07 12:37:40] [INFO] [predictor] - Predicted price for Bitcoin: 113955.02

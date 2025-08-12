@@ -1,0 +1,19 @@
+# Ignore data folder
+data/
+
+# Ignore config file
+src/config.py
+
+# Ignore model files
+models/
+
+# Ignore logs
+logs/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+.env

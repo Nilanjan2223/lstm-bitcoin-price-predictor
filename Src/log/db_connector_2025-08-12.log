@@ -1,0 +1,6 @@
+[2025-08-12 13:58:58] [INFO] [db_connector] - Initializing database engine.
+[2025-08-12 13:58:58] [INFO] [db_connector] - Database engine initialized successfully.
+[2025-08-12 13:58:58] [DEBUG] [db_connector] - Creating new database session.
+[2025-08-12 14:03:17] [INFO] [db_connector] - Initializing database engine.
+[2025-08-12 14:03:17] [INFO] [db_connector] - Database engine initialized successfully.
+[2025-08-12 14:03:17] [DEBUG] [db_connector] - Creating new database session.

@@ -1,0 +1,4 @@
+[2025-08-07 11:40:29] [INFO] [Src.data_preprocessor] - Scaling current_price column.
+[2025-08-07 11:40:29] [INFO] [Src.data_preprocessor] - Creating sequences with 60 time steps.
+[2025-08-07 11:40:29] [INFO] [Src.data_preprocessor] - Splitting data into train and test with test size 0.2
+[2025-08-07 11:40:45] [INFO] [Src.data_preprocessor] - Scaling current_price column.

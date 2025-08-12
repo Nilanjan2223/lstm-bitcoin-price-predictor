@@ -1,0 +1,3 @@
+[2025-08-07 12:22:31] [INFO] [model_builder] - Initializing LSTMModelBuilder with input shape: (60, 1)
+[2025-08-07 12:22:31] [INFO] [model_builder] - Building LSTM model.
+[2025-08-07 12:22:31] [INFO] [model_builder] - LSTM model compiled successfully.
