@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/a99c76b5f46a40c3827e48cd7ec45afc/artifacts
+end_time: 1755067551613
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a99c76b5f46a40c3827e48cd7ec45afc
+run_name: Bitcoin_lstm_existing
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755067538792
+status: 4
+tags: []
+user_id: NILANJAN SARKAR

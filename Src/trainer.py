@@ -1,11 +1,10 @@
 # src/trainer.py
-
+import mlflow
+import mlflow.keras
 import os
 from tensorflow.keras.callbacks import ModelCheckpoint
 from config import Config
 from log import logger
-
-logger = logger.get_logger(__name__)
 
 class ModelTrainer:
     def __init__(self, model, coin_name: str):
@@ -15,34 +14,36 @@ class ModelTrainer:
         self.epochs = Config.EPOCHS
         self.batch_size = Config.BATCH_SIZE
 
-        os.makedirs(self.model_dir, exist_ok=True)
-        logger.info(f"ModelTrainer initialized for {coin_name}")
-
     def train(self, X_train, y_train, X_val=None, y_val=None):
-        """
-        Trains the LSTM model and saves it to disk.
-        """
-        try:
-            model_path = os.path.join(self.model_dir, f"{self.coin_name}_lstm_model.h5")
-            logger.info(f"Model will be saved to: {model_path}")
+        model_path = os.path.join(self.model_dir, f"{self.coin_name}_lstm_model.h5")
+
+        with mlflow.start_run(run_name=f"{self.coin_name}_lstm"):
+            # Log parameters
+            mlflow.log_param("epochs", self.epochs)
+            mlflow.log_param("batch_size", self.batch_size)
+            mlflow.log_param("time_steps", Config.TIME_STEPS)
+            mlflow.log_param("dropout_rate", 0.2)
 
             callbacks = [
                 ModelCheckpoint(filepath=model_path, save_best_only=True, monitor='loss', verbose=1)
             ]
 
-            logger.info("Starting model training...")
             history = self.model.fit(
                 X_train, y_train,
                 epochs=self.epochs,
                 batch_size=self.batch_size,
-                validation_data=(X_val, y_val) if X_val is not None else None,
+                validation_data=(X_val, y_val),
                 callbacks=callbacks,
                 verbose=1
             )
 
-            logger.info("Model training completed successfully.")
-            return history
+            # Log metrics
+            for epoch in range(self.epochs):
+                mlflow.log_metric("train_loss", history.history['loss'][epoch], step=epoch)
+                if 'val_loss' in history.history:
+                    mlflow.log_metric("val_loss", history.history['val_loss'][epoch], step=epoch)
 
-        except Exception as e:
-            logger.error(f"Training failed: {str(e)}")
-            raise
+            # Log the model
+            mlflow.keras.log_model(self.model, artifact_path="model")
+
+        return history
