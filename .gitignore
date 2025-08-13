@@ -17,3 +17,6 @@ __pycache__/
 # Ignore virtual environment
 venv/
 .env
+
+# Ignore MLflow local runs
+mlruns/
